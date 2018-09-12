@@ -124,6 +124,12 @@ const damageMods = {
   2273483223: DamageType.Thermal
 };
 
+const resistanceMods = {
+  1546607980: DamageType.Void,
+  1546607978: DamageType.Arc,
+  1546607979: DamageType.Thermal,
+}
+
 // Prototype for Item objects - add methods to this to add them to all
 // items.
 const ItemProto = {
@@ -492,6 +498,13 @@ export function makeItem(
   } catch (e) {
     console.error(`Error building sockets for ${createdItem.name}`, item, itemDef, e);
   }
+
+  try {
+    if (createdItem.bucket && createdItem.bucket.sort === 'Armor') {
+      const dmgHash = createdItem.sockets.categories[1].sockets[1].plug.plugItem.investmentStats[0].statTypeHash;
+      createdItem.dmg = [null, 'kinetic', 'arc', 'solar', 'void'][resistanceMods[dmgHash]] as typeof createdItem.dmg;
+    }
+  } catch(e) { console.log(e) }
 
   if (itemDef.perks && itemDef.perks.length) {
     createdItem.perks = itemDef.perks
