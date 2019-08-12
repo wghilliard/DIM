@@ -4,12 +4,14 @@ import ItemPopupTrigger from 'app/inventory/ItemPopupTrigger';
 import ItemExpiration from 'app/item-popup/ItemExpiration';
 import PursuitItem from './PursuitItem';
 import { percent } from 'app/shell/filters';
+import { EnhancedDescription } from './ObjectiveDescription';
+import { D2ManifestDefinitions } from 'app/destiny2/d2-definitions.service';
 
 /**
  * A Pursuit is an inventory item that represents a bounty or quest. This displays
  * a pursuit tile for the Progress page.
  */
-export default function Pursuit({ item }: { item: DimItem }) {
+export default function Pursuit({ item, defs }: { item: DimItem; defs: D2ManifestDefinitions }) {
   const expired = showPursuitAsExpired(item);
 
   const showObjectiveDetail =
@@ -43,7 +45,9 @@ export default function Pursuit({ item }: { item: DimItem }) {
           <ItemExpiration item={item} compact={true} />
           {item.name}
         </span>
-        <div className="milestone-description">{item.description}</div>
+        <div className="milestone-description">
+          <EnhancedDescription displayName={item.description} defs={defs} />
+        </div>
       </div>
     </div>
   );

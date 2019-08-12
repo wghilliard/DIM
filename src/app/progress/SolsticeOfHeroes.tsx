@@ -37,7 +37,7 @@ export default function SolsticeOfHeroes({
           <ErrorBoundary name="Solstice">
             <div className="progress-for-character">
               {armor.map((item) => (
-                <Pursuit item={item} key={item.index} />
+                <Pursuit item={item} key={item.index} defs={defs} />
               ))}
             </div>
           </ErrorBoundary>
