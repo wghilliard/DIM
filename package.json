@@ -145,7 +145,7 @@
     "babel-plugin-idx": "^2.4.0",
     "body-scroll-lock": "^2.6.1",
     "browserslist": "^4.0.0",
-    "bungie-api-ts": "^2.0.0",
+    "bungie-api-ts": "2.1.0",
     "caniuse-lite": ">=1.0.30000843",
     "ceaser-easing": "^1.0.1",
     "circuit-breaker-js": "^0.0.1",
