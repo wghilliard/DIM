@@ -1430,17 +1430,17 @@
     lodash.unescape "4.0.1"
     semver "^6.3.0"
 
-"@uirouter/core@5.0.23":
-  version "5.0.23"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.23.tgz#363b4bea635a1b48900dc7e65793a65a3b58a79e"
-  integrity sha512-rwFOH++z/KY8y+h0IOpQ5uC8Nim6E0EBCQrIjhVCr+XKYXgpK+VdtuOLFdogvbJ3AAi5Z7ei00qdEr7Did5CAg==
+"@uirouter/core@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.1.tgz#93b02a5d178a7ab7313f34b7b3f019a000d23396"
+  integrity sha512-mHCutiHtDDRKYmrJ92XPKDoSb2bgqaDyUpHdF4hUE+riwgkCvGdBjL8u+VDTcV3slBAk6B0LBIOIajjWkkObbQ==
 
-"@uirouter/react@^0.8.2":
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/@uirouter/react/-/react-0.8.9.tgz#15285739c64cab53bb73eeb6e8ceb0836ed2b43b"
-  integrity sha512-nxyJI/f+QIhZDyTuWiSBLmUlXpfv+/W43VH3uxD1AxMpK6GE8ZAIhAMI6GKG+waljM5y165mN4aiuynnTOjBsg==
+"@uirouter/react@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@uirouter/react/-/react-0.8.10.tgz#d801fafadf07aa0ff5c591f4771dd713a5129021"
+  integrity sha512-vr3f+BWGLOyDzaYb/CVmrNPmJcvE5DYtK4qfggWc8jL75uZoZC2aqTroQkxksBeEgTZ6YHJcSrzbGeqx0mvJmQ==
   dependencies:
-    "@uirouter/core" "5.0.23"
+    "@uirouter/core" "6.0.1"
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
